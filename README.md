@@ -7,4 +7,4 @@ These desktop apss are based on tkinter library
 it is a calculator that can do simple mathematical tasks
 
 ## interface example:
-![image](https://github.com/zaitsevIV/desktop_apps/blob/master/calculator.PNG)
+![image](https://github.com/zaitsevIV/desktop_apps/blob/master/calculator_new_design.PNG)
