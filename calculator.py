@@ -103,41 +103,41 @@ def find_sqrt():
 
 
 def button_config(digit):
-    return tk.Button(text=digit, command=lambda: add_digit(digit))
+    return tk.Button(text=digit, bg="#a5a5a5", command=lambda: add_digit(digit))
 
 
 def calculate_button(operation):
-    return tk.Button(text=operation, command=calculate)
+    return tk.Button(text=operation, bg="#ff9f0a", command=calculate)
 
 
 def operation_button(operation):
-    return tk.Button(text=operation, command=lambda: add_operation(operation))
+    return tk.Button(text=operation, bg="#ff9f0a", command=lambda: add_operation(operation))
 
 
 def clear_button(operation):
-    return tk.Button(text=operation, command=clear)
+    return tk.Button(text=operation, bg="white", command=clear)
 
 
 def dlt_char_button(operation):
-    return tk.Button(text=operation, command=delete_char)
+    return tk.Button(text=operation, bg="white", command=delete_char)
 
 
 def float_button(operation):
-    return tk.Button(text=operation, command=make_float)
+    return tk.Button(text=operation, bg="#ff9f0a", command=make_float)
 
 
 def degree_button(operation):
-    return tk.Button(text=operation, command=degree)
+    return tk.Button(text=operation, bg="#ff9f0a", command=degree)
 
 
 def sqrt_button(operation):
-    return tk.Button(text=operation, command=find_sqrt)
+    return tk.Button(text=operation, bg="#ff9f0a", command=find_sqrt)
 
 
 root = Tk()
 root.title("calculator")
 root.geometry(f"240x330+100+200")
-root["bg"] = "white"
+root["bg"] = "black"
 
 root.bind('<Key>', press_key)
 
