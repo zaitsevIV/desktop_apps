@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter import *
 from tkinter import messagebox
 
 
@@ -134,9 +133,10 @@ def sqrt_button(operation):
     return tk.Button(text=operation, bg="#ff9f0a", command=find_sqrt)
 
 
-root = Tk()
+root = tk.Tk()
 root.title("calculator")
 root.geometry(f"240x330+100+200")
+root.resizable(0, 0)
 root["bg"] = "black"
 
 root.bind('<Key>', press_key)
@@ -156,31 +156,31 @@ calcul = tk.Entry(root, justify=tk.RIGHT, font=('Verdana', 15), width=15)
 calcul.insert(0, "0")
 calcul.grid(row=0, column=0, columnspan=4, sticky="we")
 
-button_config("7").grid(row=2, column=0, sticky="wesn", padx=1, pady=1)
-button_config("4").grid(row=3, column=0, sticky="wesn", padx=1, pady=1)
-button_config("1").grid(row=4, column=0, sticky="wesn", padx=1, pady=1)
+button_config("7").grid(row=2, column=0, sticky="nsew", padx=1, pady=1)
+button_config("4").grid(row=3, column=0, sticky="nsew", padx=1, pady=1)
+button_config("1").grid(row=4, column=0, sticky="nsew", padx=1, pady=1)
 
-button_config("8").grid(row=2, column=1, sticky="wesn", padx=1, pady=1)
-button_config("5").grid(row=3, column=1, sticky="wesn", padx=1, pady=1)
-button_config("2").grid(row=4, column=1, sticky="wesn", padx=1, pady=1)
+button_config("8").grid(row=2, column=1, sticky="nsew", padx=1, pady=1)
+button_config("5").grid(row=3, column=1, sticky="nsew", padx=1, pady=1)
+button_config("2").grid(row=4, column=1, sticky="nsew", padx=1, pady=1)
 
-button_config("9").grid(row=2, column=2, sticky="wesn", padx=1, pady=1)
-button_config("6").grid(row=3, column=2, sticky="wesn", padx=1, pady=1)
-button_config("3").grid(row=4, column=2, sticky="wesn", padx=1, pady=1)
+button_config("9").grid(row=2, column=2, sticky="nsew", padx=1, pady=1)
+button_config("6").grid(row=3, column=2, sticky="nsew", padx=1, pady=1)
+button_config("3").grid(row=4, column=2, sticky="nsew", padx=1, pady=1)
 
-button_config("0").grid(row=5, column=1, sticky="wesn", padx=1, pady=1)
+button_config("0").grid(row=5, column=1, sticky="nsew", padx=1, pady=1)
 
-operation_button("/").grid(row=1, column=3, sticky="wesn", padx=1, pady=1)
-operation_button("*").grid(row=2, column=3, sticky="wesn", padx=1, pady=1)
-operation_button("-").grid(row=3, column=3, sticky="wesn", padx=1, pady=1)
-operation_button("+").grid(row=4, column=3, sticky="wesn", padx=1, pady=1)
+operation_button("/").grid(row=1, column=3, sticky="nsew", padx=1, pady=1)
+operation_button("*").grid(row=2, column=3, sticky="nsew", padx=1, pady=1)
+operation_button("-").grid(row=3, column=3, sticky="nsew", padx=1, pady=1)
+operation_button("+").grid(row=4, column=3, sticky="nsew", padx=1, pady=1)
 
-calculate_button("=").grid(row=5, column=3, sticky="wesn", padx=1, pady=1)
-clear_button("C").grid(row=5, column=0, sticky="wesn", padx=1, pady=1)
-dlt_char_button("<--").grid(row=5, column=2, sticky="wesn", padx=1, pady=1)
-float_button(".").grid(row=1, column=0, sticky="wesn", padx=1, pady=1)
-degree_button("^2").grid(row=1, column=1, sticky="wesn", padx=1, pady=1)
-sqrt_button("sqrt").grid(row=1, column=2, sticky="wesn", padx=1, pady=1)
+calculate_button("=").grid(row=5, column=3, sticky="nsew", padx=1, pady=1)
+clear_button("C").grid(row=5, column=0, sticky="nsew", padx=1, pady=1)
+dlt_char_button("<--").grid(row=5, column=2, sticky="nsew", padx=1, pady=1)
+float_button(".").grid(row=1, column=0, sticky="nsew", padx=1, pady=1)
+degree_button("^2").grid(row=1, column=1, sticky="nsew", padx=1, pady=1)
+sqrt_button("sqrt").grid(row=1, column=2, sticky="nsew", padx=1, pady=1)
 
 if __name__ == "__main__":
     root.mainloop()
